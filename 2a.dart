@@ -1,9 +1,8 @@
 void main() {
-  String plaintext = "SECRET Message";
-  String ciphertext = encrypt(plaintext, [3, 1, 4, 2]);
-  print(ciphertext); // wynik: YCPRGTROHAYPAOS
-  ciphertext = decrypt(ciphertext, [3,1,4,2]);
-  print(ciphertext); // wynik: CRYPTOGRAPHYOAS
+  String plaintext = "UNIVERSITY";
+  print('input: $plaintext');
+  String ciphertext = encrypt(plaintext, [3, 4, 1, 5, 2]);
+  print('output: $ciphertext');
 }
 
 String encrypt(String plaintext, List<int> key) {
@@ -41,14 +40,6 @@ String encrypt(String plaintext, List<int> key) {
   }
 
   return finalString;
-}
-
-String decrypt(String plaintext, List<int> key) {
-  var reversedKey = new List.filled(key.length, 0, growable: false);
-  for (var i = 0; i < key.length; i++) {
-    reversedKey[i] = key[key.length - i - 1];
-  }
-  return encrypt(plaintext, reversedKey);
 }
 
 String padText(String text, int d) {
