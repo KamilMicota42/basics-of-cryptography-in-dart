@@ -1,5 +1,5 @@
 void main() {
-  String plaintext = "UNIVERSITY";
+  String plaintext = "FRANCJA";
   print('input: $plaintext');
   String ciphertext = encrypt(plaintext, [3, 4, 1, 5, 2]);
   print('output: $ciphertext');
@@ -8,6 +8,9 @@ void main() {
 String encrypt(String plaintext, List<int> key) {
   int d = key.length;
   String paddedText = padText(plaintext, d);
+
+  print('Padded content: ');
+  print(paddedText);
 
   int col = d;
   double row = paddedText.length / d;
@@ -22,6 +25,11 @@ String encrypt(String plaintext, List<int> key) {
       orgMatrix[i][j] = paddedText[count];
       count++;
     }
+  }
+
+  print('Original matrix created from the padded content: ');
+  for (var i = 0; i < orgMatrix.length; i++) {
+    print(orgMatrix[i]);
   }
 
   var finalMatrix = List.generate(
@@ -39,6 +47,12 @@ String encrypt(String plaintext, List<int> key) {
     }
   }
 
+  print('Final matrix with padded content and the order: ');
+  for (var i = 0; i < finalMatrix.length; i++) {
+    print(finalMatrix[i]);
+  }
+
+  print('The final contentread from the last matrix:');
   return finalString;
 }
 

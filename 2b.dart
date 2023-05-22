@@ -28,7 +28,7 @@ List<String> alphabet = [
 ];
 
 void main() {
-  String plaintext = "I Love Sonizinha";
+  String plaintext = "DOBRYDZIEN";
   String key = 'BCADA';
   print('input: $plaintext');
   String ciphertext = encrypt(plaintext, key);
@@ -48,6 +48,8 @@ String encrypt(String plaintext, String key) {
       }
     }
   }
+
+  print('The order created with the help of a key:');
   print(keyTranslatedToListOfInts);
 
   List<List<String>> grid = List.generate(
@@ -66,6 +68,7 @@ String encrypt(String plaintext, String key) {
     }
   }
 
+  print('The content of the message in matrix:');
   for (var i = 0; i < grid.length; i++) {
     print(grid[i]);
   }
@@ -78,7 +81,9 @@ String encrypt(String plaintext, String key) {
     }
   }
 
+  print('The columns created from the matrix:');
   print(columnsStringInFirstOrder);
+
   List<int> listOfReading = List<int>.filled(key.length, 0);
   for (var i = 0; i < keyTranslatedToListOfInts.length; i++) {
     for (var j = 0; j < keyTranslatedToListOfInts.length; j++) {
@@ -94,5 +99,6 @@ String encrypt(String plaintext, String key) {
     finalWord += columnsStringInFirstOrder[listOfReading[i]];
   }
 
+  print('The content of the output created with the help of key order and the matrix:');
   return finalWord;
 }
