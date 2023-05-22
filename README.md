@@ -2,6 +2,7 @@ IMPLEMENTACJA PODSTAWOWYCH MODUŁÓW KRYPTOGRAFICZNYCH
 
 Implementacja podstawowych modułów kryptograficznych odnosi się do stworzenia systemu kryptograficznego, który może szyfrować i deszyfrować dane z wykorzystaniem prostych algorytmów kryptograficznych.
 Przykłady:
+
 \n
       ![image](https://github.com/KamilMicota42/encryption/assets/85360923/f5e2324c-dbf4-43d3-abdb-b46725e1b357)
       ![image](https://github.com/KamilMicota42/encryption/assets/85360923/fb825d4c-f550-440d-a62c-921cc261b4c8)
